@@ -1,31 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vedanta School - Medavakkam</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #f8b400; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
-    header img { height: 60px; }
-    nav a { margin: 0 10px; text-decoration: none; color: white; font-weight: bold; }
-    .banner {
-      background-color: #f0f8ff;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 1.2em;
-    }
-    .admission-banner { font-size: 2em; font-weight: bold; color: #e63946; }
-    .admission-banner span { color: green; }
-    .grades, .contact, .bus { margin: 10px 0; }
-    .bus img { max-width: 365px; margin-top: 10px; }
-    .footer-note { display: block; font-size: 0.9em; color: #333; margin-top: 5px; }
-    .content { padding: 20px; line-height: 1.6; }
-    .section-title { font-size: 1.5em; color: #333; margin-top: 20px; }
-    footer { background: #333; color: white; padding: 20px; text-align: center; }
-    footer img { width: 24px; height: 24px; margin: 0 8px; vertical-align: middle; }
-  </style>
-</head> -->
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +9,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fdf6e3; /* soft pastel background */
+      background: #fdf6e3;
       color: #333;
     }
     header {
@@ -47,15 +21,43 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-  }
+    }
     header img {
       height: 60px;
+    }
+    nav {
+      display: flex;
     }
     nav a {
       margin: 0 10px;
       text-decoration: none;
       color: white;
       font-weight: bold;
+    }
+    #menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      color: white;
+    }
+    #mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #f8b400;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    #mobile-nav a {
+      padding: 10px;
+      border-top: 1px solid #fff;
+      color: white;
+    }
+    #mobile-nav.open {
+      display: flex;
     }
     .banner {
       background: linear-gradient(to right, #ffe259, #ffa751);
@@ -75,7 +77,10 @@
       font-size: 1.2em;
       margin: 10px 0;
     }
-    .bus img { max-width: 365px; margin-top: 10px; }
+    .bus img {
+      margin-top: 10px;
+      max-width: 365px;
+    }
     .footer-note {
       font-size: 1em;
       display: block;
@@ -89,10 +94,10 @@
       font-size: 1.5em;
       color: #333;
       margin-top: 20px;
-  }
-  .section {
-    scroll-margin-top: 80px;
-  }
+    }
+    .section {
+      scroll-margin-top: 80px;
+    }
     footer {
       background: #333;
       color: white;
@@ -105,12 +110,29 @@
       margin: 0 8px;
       vertical-align: middle;
     }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      #menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.jpeg" alt="Vedanta School Logo">
+    <button id="menu-toggle">☰</button>
     <nav>
+      <a href="#vision">Vision</a>
+      <a href="#mission">Mission</a>
+      <a href="#school">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#audit">Academic Audit</a>
+      <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank">Location</a>
+    </nav>
+    <nav id="mobile-nav">
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
       <a href="#school">About</a>
@@ -207,5 +229,19 @@
 
     <p>&copy; 2025 Vedanta School, Medavakkam</p>
   </footer>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('#mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
