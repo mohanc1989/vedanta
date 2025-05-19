@@ -68,6 +68,37 @@
     #mobile-nav.open {
       display: flex;
     }
+    .slider {
+      width: 100%;
+      height: 310px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5; /* Optional: fallback background */
+    }
+    .slider img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+      position: absolute;
+    }
+    .slider-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+      z-index: 1;
+    }
+   
+    .slider img.loaded {
+      opacity: 1;
+    }
     .banner {
       background: linear-gradient(to right, #ffe259, #ffa751);
       padding: 30px 20px;
@@ -150,7 +181,10 @@
       <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank">Location</a>
     </nav>
   </header>
-
+  <div class="slider">
+    <div class="slider-overlay"></div>
+    <img id="slider-image" src="sliders/slide1.jpeg" alt="Slider Image">
+  </div>  
   <div class="banner">
     <div class="admission-banner">
       ADMISSION <span>OPEN</span>
@@ -251,6 +285,34 @@
         nav.classList.remove('open');
       });
     });
+    const sliderImage = document.getElementById('slider-image');
+    const images = [
+      'sliders/slide1.jpeg',
+      'sliders/slide2.jpeg',
+      'sliders/slide3.jpeg',
+      'sliders/slide4.jpeg',
+      'sliders/slide5.jpeg',
+      'sliders/slide6.jpeg',
+      'sliders/slide7.jpeg',
+      'sliders/slide8.jpeg',
+      'sliders/slide9.jpeg'
+    ];
+    let current = 0;
+
+    function showNextImage() {
+      const img = new Image();
+      img.src = images[current];
+      img.onload = () => {
+        sliderImage.src = img.src;
+        sliderImage.classList.remove('loaded'); // trigger fade
+        void sliderImage.offsetWidth; // force reflow
+        sliderImage.classList.add('loaded'); // fade in
+      };
+      current = (current + 1) % images.length;
+    }
+
+    setInterval(showNextImage, 3000);
+    showNextImage(); // Initial load
   </script>
 </body>
 </html>
