@@ -121,6 +121,26 @@
       margin-top: 10px;
       max-width: 365px;
     }
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 30px auto;
+    max-width: 90%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
     .footer-note {
       font-size: 1em;
       display: block;
@@ -149,6 +169,27 @@
       height: 24px;
       margin: 0 8px;
       vertical-align: middle;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      padding-bottom: 40%; /* Adjusted shorter height */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
     @media (max-width: 768px) {
       nav {
@@ -208,6 +249,29 @@
       <span class="footer-note">Pick up & Drop Available</span>
     </div>
   </div>
+
+  <!-- Responsive YouTube Video -->
+<!-- <div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/2SLU5P5z7DA" 
+    title="Vedanta School Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div> -->
+<div class="video-section">
+  <h3 style="text-align:center; color:#7d2c2c;">Watch Our School Introduction</h3>
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/2SLU5P5z7DA" 
+    title="Vedanta School Intro Video"
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
 
   <div class="content">
     <div id="vision" class="section">
