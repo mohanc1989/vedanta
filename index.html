@@ -150,6 +150,28 @@
       margin: 0 8px;
       vertical-align: middle;
     }
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .info-table {
+      flex: 1 1 300px;
+      max-width: 100%;
+      border-collapse: collapse;
+      background: #fff8dc;
+      border: 1px solid #ccc;
+    }
+    .info-table th, .info-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    .info-table th {
+      background: #f8b400;
+      color: white;
+    }
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -210,6 +232,31 @@
   </div>
 
   <div class="content">
+    <div class="info-container">
+      <div class="section">
+        <h2 class="section-title">Age Criteria (As on 31 March 2025)</h2>
+        <table class="info-table">
+          <tr><th>Class</th><th>Minimum Age</th></tr>
+          <tr><td>Play Group</td><td>2 years</td></tr>
+          <tr><td>Pre-KG</td><td>3 years</td></tr>
+          <tr><td>LKG</td><td>4 years</td></tr>
+          <tr><td>UKG</td><td>5 years</td></tr>
+          <tr><td>Grade I</td><td>6 years</td></tr>
+          <tr><td>Grade II</td><td>7 years</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">School Timings</h2>
+        <table class="info-table">
+          <tr><th>Class</th><th>Timing</th></tr>
+          <tr><td>Pre-KG</td><td>9:00 AM - 12:00 PM</td></tr>
+          <tr><td>LKG</td><td>9:00 AM - 12:30 PM</td></tr>
+          <tr><td>UKG</td><td>9:00 AM - 12:30 PM</td></tr>
+          <tr><td>Grade I & II</td><td>9:00 AM - 2:45 PM</td></tr>
+        </table>
+      </div>
+    </div>
     <div id="vision" class="section">
       <h2 class="section-title">Vision</h2>
       <p>“To stimulate curiosity, creativity, and resilience, empowering students to be lifelong learners and responsible citizens.”</p>
