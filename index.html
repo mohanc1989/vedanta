@@ -1,365 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BDV1T5HLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6BDV1T5HLR');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BDV1T5HLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6BDV1T5HLR');
+  </script>
+  
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Vedanta School Medavakkam - Excellence in early childhood education. Admissions open for Pre-KG to Grade 2. Call 8939783140">
+  <meta name="keywords" content="Vedanta School, Medavakkam, preschool, kindergarten, primary school, admission">
+  <meta name="author" content="Vedanta School">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f8b400">
+  
+  <!-- Open Graph tags for social sharing -->
+  <meta property="og:title" content="Vedanta School - Medavakkam">
+  <meta property="og:description" content="Excellence in early childhood education. Admissions open for Pre-KG to Grade 2.">
+  <meta property="og:image" content="logo.jpeg">
+  <meta property="og:url" content="https://www.vedantaschool.in">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vedanta School - Medavakkam">
+  <meta name="twitter:description" content="Excellence in early childhood education. Admissions open for Pre-KG to Grade 2.">
+  
   <title>Vedanta School - Medavakkam</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdf6e3;
-      color: #333;
-    }
-    header {
-      background: #f8b400;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header img {
-      height: 60px;
-    }
-    nav {
-      display: flex;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-    #menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5em;
-      color: white;
-    }
-    #mobile-nav {
-      display: none;
-      flex-direction: column;
-      background: #f8b400;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-    }
-    #mobile-nav a {
-      padding: 10px;
-      border-top: 1px solid #fff;
-      color: white;
-    }
-    #mobile-nav.open {
-      display: flex;
-    }
-    .slider {
-      width: 100%;
-      height: 310px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f5f5f5; /* Optional: fallback background */
-    }
-    .slider img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-      position: absolute;
-    }
-    .slider-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
-      z-index: 1;
-    }
-   
-    .slider img.loaded {
-      opacity: 1;
-    }
-    .banner {
-      background: linear-gradient(to right, #ffe259, #ffa751);
-      padding: 30px 20px;
-      text-align: center;
-      color: #000;
-    }
-    .admission-banner {
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .admission-banner span {
-      color: red;
-    }
-    .grades, .contact, .bus, .whatsapp {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-    .bus img {
-      margin-top: 10px;
-      max-width: 365px;
-    }
-    .footer-note {
-      font-size: 1em;
-      display: block;
-      margin-top: 5px;
-    }
-    .content {
-      padding: 20px;
-      line-height: 1.6;
-    }
-    .section-title {
-      font-size: 1.5em;
-      color: #333;
-      margin-top: 20px;
-    }
-    .section {
-      scroll-margin-top: 80px;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    footer img {
-      width: 24px;
-      height: 24px;
-      margin: 0 8px;
-      vertical-align: middle;
-    }
-    .info-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .info-table {
-      flex: 1 1 300px;
-      max-width: 100%;
-      border-collapse: collapse;
-      background: #fff8dc;
-      border: 1px solid #ccc;
-    }
-    .info-table th, .info-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-    .info-table th {
-      background: #f8b400;
-      color: white;
-    }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      #menu-toggle {
-        display: block;
-      }
-    }
-  </style>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="logo.jpeg" as="image">
+  <link rel="preload" href="sliders/slide1.jpeg" as="image">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Vedanta School",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Medavakkam",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918939783140",
+    "url": "https://www.vedantaschool.in",
+    "description": "Excellence in early childhood education"
+  }
+  </script>
 </head>
 <body>
   <header>
-    <img src="logo.jpeg" alt="Vedanta School Logo">
-    <button id="menu-toggle">☰</button>
-    <nav>
+    <img src="logo.jpeg" alt="Vedanta School Logo" width="200" height="60">
+    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <nav role="navigation" aria-label="Main navigation">
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
       <a href="#school">About</a>
       <a href="#curriculum">Curriculum</a>
       <a href="#audit">Academic Audit</a>
-      <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank">Location</a>
+      <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank" rel="noopener">Location</a>
     </nav>
-    <nav id="mobile-nav">
+    <nav id="mobile-nav" role="navigation" aria-label="Mobile navigation">
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
       <a href="#school">About</a>
       <a href="#curriculum">Curriculum</a>
       <a href="#audit">Academic Audit</a>
-      <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank">Location</a>
+      <a href="https://maps.google.com/maps?q=12.9140455%2C80.1868434&z=17&hl=en" target="_blank" rel="noopener">Location</a>
     </nav>
   </header>
-  <div class="slider">
-    <div class="slider-overlay"></div>
-    <img id="slider-image" src="sliders/slide1.jpeg" alt="Slider Image">
-  </div>  
-  <div class="banner">
-    <div class="admission-banner">
-      ADMISSION <span>OPEN</span>
-    </div>
   
-    <div class="grades">
-      Pre-KG | Play Group | LKG | UKG | Grade 1 & 2
-    </div>
-  
-    <div class="contact">
-      Call Us @ <strong>8939783140</strong>
-    </div>
-
-    <div class="whatsapp">
-      <img src="whatsapp.png" alt="WhatsApp Icon" width="24" style="vertical-align: middle; margin-right: 8px;">
-      WhatsApp @ <strong>7358347906</strong>
-    </div>
-  
-    <div class="bus">
-      <img src="bus.png" alt="School Bus Icon"><br>
-      <span class="footer-note">Pick up & Drop Available</span>
-    </div>
-  </div>
-
-  <div class="content">
-    <div class="info-container">
-      <div class="section">
-        <h2 class="section-title">Age Criteria (As on 31 March 2025)</h2>
-        <table class="info-table">
-          <tr><th>Class</th><th>Minimum Age</th></tr>
-          <tr><td>Play Group</td><td>2 years</td></tr>
-          <tr><td>Pre-KG</td><td>3 years</td></tr>
-          <tr><td>LKG</td><td>4 years</td></tr>
-          <tr><td>UKG</td><td>5 years</td></tr>
-          <tr><td>Grade I</td><td>6 years</td></tr>
-          <tr><td>Grade II</td><td>7 years</td></tr>
-        </table>
+  <main>
+    <section class="slider" role="region" aria-label="School image slideshow">
+      <div class="slider-overlay"></div>
+      <img id="slider-image" src="sliders/slide1.jpeg" alt="Vedanta School campus and activities" loading="lazy" width="800" height="310">
+    </section>
+    
+    <section class="banner" aria-label="Admission information">
+      <div class="admission-banner">
+        ADMISSION <span>OPEN</span>
       </div>
+      
+      <div class="grades">
+        Pre-KG | Play Group | LKG | UKG | Grade 1 & 2
+      </div>
+      
+      <div class="contact">
+        Call Us @ <a href="tel:+918939783140" class="phone-link"><strong>8939783140</strong></a>
+      </div>
+      
+      <div class="whatsapp">
+        <img src="whatsapp.png" alt="WhatsApp Icon" width="24" style="vertical-align: middle; margin-right: 8px;">
+        <a href="https://wa.me/917358347906" target="_blank" rel="noopener" class="whatsapp-link">
+          WhatsApp @ <strong>7358347906</strong>
+        </a>
+      </div>
+      
+      <div class="bus">
+        <img src="bus.png" alt="School Bus Service" width="365" height="auto"><br>
+        <span class="footer-note">Pick up & Drop Available</span>
+      </div>
+    </section>
+    
+    <div class="content">
+      <div class="info-container">
+        <div class="section">
+          <h2 class="section-title">Age Criteria (As on 31 March 2025)</h2>
+          <table class="info-table" role="table" aria-label="Age criteria for admission">
+            <thead>
+              <tr><th scope="col">Class</th><th scope="col">Minimum Age</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Play Group</td><td>2 years</td></tr>
+              <tr><td>Pre-KG</td><td>3 years</td></tr>
+              <tr><td>LKG</td><td>4 years</td></tr>
+              <tr><td>UKG</td><td>5 years</td></tr>
+              <tr><td>Grade I</td><td>6 years</td></tr>
+              <tr><td>Grade II</td><td>7 years</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title">School Timings</h2>
+          <table class="info-table" role="table" aria-label="School timings">
+            <thead>
+              <tr><th scope="col">Class</th><th scope="col">Timing</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Pre-KG</td><td>9:00 AM - 12:00 PM</td></tr>
+              <tr><td>LKG</td><td>9:00 AM - 12:30 PM</td></tr>
+              <tr><td>UKG</td><td>9:00 AM - 12:30 PM</td></tr>
+              <tr><td>Grade I & II</td><td>9:00 AM - 2:45 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div id="vision" class="section">
+        <h2 class="section-title">Vision</h2>
+        <p>"To stimulate curiosity, creativity, and resilience, empowering students to be lifelong learners and responsible citizens."</p>
+      </div>
+      
+      <div id="mission" class="section">
+        <h2 class="section-title">Mission</h2>
+        <p>"To inspire curiosity, foster a love for learning, and encourage students to reach their full potential."</p>
+      </div>
+      
+      <div id="school" class="section">
+        <h2 class="section-title">The School</h2>
+        <p>Vedanta is a wonderful location for child care. A place for self discovery and personal development. It helps  your child find his/her natural interest or abilities by encouraging your child's imagination. Vedanta prepare kids for life. Our young staff at VEDANTA believes that all kids can learn given good teachers. We step in when student start to lag behind with extra help to ensure that  there is no dead end streets down the child's educational life.    
+          VEDANTA not only prepares your child's future but ensures they have a good day every day.
+          
+          The curriculum has been carefully designed to assure that its challenging, rewarding and at the same time to prepare them for the next stage of life.
+          Appropriate learning materials, excellent environment, high quality toys and activities for indoor and outdoor.
+          Care, Education & learning at VEDANTA receive a different emphasis as per the need, age and situation of the child.
+          Keeping in mind the child's environment their well being, the best possible for learning, growth and development is created at VEDANTA.</p>
+      </div>
+      
+      <div id="curriculum" class="section">
+        <h2 class="section-title">Curriculum</h2>
+        <ul>
+          <li><strong>Language and Interaction:</strong> Language is a medium of thought and expression. VEDANTA supports the development of children's thinking, sociability, emotions and interaction skills and their learning processes with the aid of language in particular. This helps to strengthen children's emotional life, creativity and self – esteem.
+              Children are given diverse interactive situations, both in everyday communication situation and in learning situation. This helps them to grow into active speakers and listeners.</li>
+          <li><strong>Mathematics:</strong> The learning environment shall support and promote the development of each child's positive attitude towards mathematical thinking. Children's understandings of mathematics are taught the natural way by stories, plays, discussions and games and ample use of illustrative examples.</li>
+          <li><strong>Ethics and Philosophy:</strong> General ethical education shall be included in all activities which will help in the development of Self- esteem, interpersonal social skills and care for the environment. This helps in the development of children's ethical thinking. 
+              Education in cultural philosophy will lead to the development of philosophical thinking. This will not only help the child to appreciate the cultural and natural heritage of their own but also that of other cultures. They shall deal with tolerance and temperance, justice and fairness, courage and one's own identity, as well as compassion, benevolence and care.</li>
+          <li><strong>Environmental and Natural Studies:</strong>Children learn to understand and appreciate natural and man- made environment , different people and environment, as well The effect of their own action on their environment. Children will learn to preserve and care for the environment. They shall be encouraged to form questions and seek answers. They will learn to describe, compare, classify and sort information through observation.</li>
+          <li><strong>Health:</strong> Vedanta shall promote the Physical, psychological, and social health, growth and development of children. They shall be guided to take care of their health and daily personal hygiene. Their healthy eating habits shall be supported and they shall be guided in good table manners. They shall be encouraged to take correct balance between work, rest, and recreation.</li>
+          <li><strong>Physical and Motor Development:</strong> Children's physical and motor condition, movement control and basic motor skills shall be trained through exercise and play. Their fine motor functions, manual skills and hand-eye coordination shall be developed through everyday activities.</li>
+          <li><strong>Art and Culture:</strong> At Vedanta, musicals and other artistic experiences shall form a significant part of the children's emotional, practical and cognitive development. Children's creativity, imagination and self expression will be developed through making pictures,  and objects by hand, drama, dance, music and movement. They shall learn to appreciate their own  work and that of other people.</li>
+        </ul>
+      </div>
+      
+      <div id="audit" class="section">
+        <h2 class="section-title">Academic Audit</h2>
+        <p>Video recording students' learning outcomes at Vedanta provides several important benefits for both parents and students:
 
-      <div class="section">
-        <h2 class="section-title">School Timings</h2>
-        <table class="info-table">
-          <tr><th>Class</th><th>Timing</th></tr>
-          <tr><td>Pre-KG</td><td>9:00 AM - 12:00 PM</td></tr>
-          <tr><td>LKG</td><td>9:00 AM - 12:30 PM</td></tr>
-          <tr><td>UKG</td><td>9:00 AM - 12:30 PM</td></tr>
-          <tr><td>Grade I & II</td><td>9:00 AM - 2:45 PM</td></tr>
-        </table>
+          Transparent Progress Tracking: Parents can directly see what their child has learned and the level they have achieved by viewing the recorded lessons and outcomes. This transparency builds trust and keeps parents informed about their child's academic journey.
+          
+          Objective Assessment: Video records offer an unbiased, clear account of each student's performance and understanding, making it easier to identify strengths and areas for improvement.
+          
+          Parental Engagement: With access to these recordings, parents can be more actively involved in their child's education, supporting learning at home and communicating more effectively with teachers.
+          
+          Accountability and Quality Assurance: Video documentation ensures that teaching standards are maintained and provides a reliable reference for academic audits and reviews.
+          
+          Convenient Review: If parents or students wish to revisit a particular lesson or concept, the recordings are always available for review, supporting continuous learning and reinforcement.
+          
+          Overall, video recording learning outcomes at Vedanta enhance transparency, accountability, and parental involvement, ensuring every child's progress is clearly documented and easily accessible.</p>
       </div>
     </div>
-    <div id="vision" class="section">
-      <h2 class="section-title">Vision</h2>
-      <p>“To stimulate curiosity, creativity, and resilience, empowering students to be lifelong learners and responsible citizens.”</p>
-    </div>
-
-    <div id="mission" class="section">
-      <h2 class="section-title">Mission</h2>
-      <p>“To inspire curiosity, foster a love for learning, and encourage students to reach their full potential.”</p>
-    </div>
-
-    <div id="school" class="section">
-      <h2 class="section-title">The School</h2>
-      <p>Vedanta is a wonderful location for child care. A place for self discovery and personal development. It helps  your child find his/her natural interest or abilities by encouraging your child’s imagination. Vedanta prepare kids for life. Our young staff at VEDANTA believes that all kids can learn given good teachers. We step in when student start to lag behind with extra help to ensure that  there is no dead end streets down the child’s educational life.    
-        VEDANTA not only prepares your child’s future but ensures they have a good day every day.
-        
-        The curriculum has been carefully designed to assure that its challenging, rewarding and at the same time to prepare them for the next stage of life.
-        Appropriate learning materials, excellent environment, high quality toys and activities for indoor and outdoor.
-        Care, Education & learning at VEDANTA receive a different emphasis as per the need, age and situation of the child.
-        Keeping in mind the child’s environment their well being, the best possible for learning, growth and development is created at VEDANTA.</p>
-    </div>
-
-    <div id="curriculum" class="section">
-      <h2 class="section-title">Curriculum</h2>
-      <ul>
-        <li><strong>Language and Interaction:</strong> Language is a medium of thought and expression. VEDANTA supports the development of children’s thinking, sociability, emotions and interaction skills and their learning processes with the aid of language in particular. This helps to strengthen children’s emotional life, creativity and self – esteem.
-            Children are given diverse interactive situations, both in everyday communication situation and in learning situation. This helps them to grow into active speakers and listeners.</li>
-        <li><strong>Mathematics:</strong> The learning environment shall support and promote the development of each child’s positive attitude towards mathematical thinking. Children’s understandings of mathematics are taught the natural way by stories, plays, discussions and games and ample use of illustrative examples.</li>
-        <li><strong>Ethics and Philosophy:</strong> General ethical education shall be included in all activities which will help in the development of Self- esteem, interpersonal social skills and care for the environment. This helps in the development of children’s ethical thinking. 
-            Education in cultural philosophy will lead to the development of philosophical thinking. This will not only help the child to appreciate the cultural and natural heritage of their own but also that of other cultures. They shall deal with tolerance and temperance, justice and fairness, courage and one’s own identity, as well as compassion, benevolence and care.</li>
-        <li><strong>Environmental and Natural Studies:</strong>Children learn to understand and appreciate natural and man- made environment , different people and environment, as well The effect of their own action on their environment. Children will learn to preserve and care for the environment. They shall be encouraged to form questions and seek answers. They will learn to describe, compare, classify and sort information through observation.</li>
-        <li><strong>Health:</strong> Vedanta shall promote the Physical, psychological, and social health, growth and development of children. They shall be guided to take care of their health and daily personal hygiene. Their healthy eating habits shall be supported and they shall be guided in good table manners. They shall be encouraged to take correct balance between work, rest, and recreation.</li>
-        <li><strong>Physical and Motor Development:</strong> Children’s physical and motor condition, movement control and basic motor skills shall be trained through exercise and play. Their fine motor functions, manual skills and hand-eye coordination shall be developed through everyday activities.</li>
-        <li><strong>Art and Culture:</strong> At Vedanta, musicals and other artistic experiences shall form a significant part of the children’s emotional, practical and cognitive development. Children’s creativity, imagination and self expression will be developed through making pictures,  and objects by hand, drama, dance, music and movement. They shall learn to appreciate their own  work and that of other people.</li>
-      </ul>
-    </div>
-
-    <div id="audit" class="section">
-      <h2 class="section-title">Academic Audit</h2>
-      <p>Video recording students’ learning outcomes at Vedanta provides several important benefits for both parents and students:
-
-        Transparent Progress Tracking: Parents can directly see what their child has learned and the level they have achieved by viewing the recorded lessons and outcomes. This transparency builds trust and keeps parents informed about their child’s academic journey.
-        
-        Objective Assessment: Video records offer an unbiased, clear account of each student’s performance and understanding, making it easier to identify strengths and areas for improvement.
-        
-        Parental Engagement: With access to these recordings, parents can be more actively involved in their child’s education, supporting learning at home and communicating more effectively with teachers.
-        
-        Accountability and Quality Assurance: Video documentation ensures that teaching standards are maintained and provides a reliable reference for academic audits and reviews.
-        
-        Convenient Review: If parents or students wish to revisit a particular lesson or concept, the recordings are always available for review, supporting continuous learning and reinforcement.
-        
-        Overall, video recording learning outcomes at Vedanta enhance transparency, accountability, and parental involvement, ensuring every child’s progress is clearly documented and easily accessible.</p>
-    </div>
-  </div>
-
+  </main>
+  
   <footer>
     <p>Follow us on:</p>
-    <a href="https://www.facebook.com/Vedanta100" target="_blank"><img src="fb-img.png" alt="Facebook"></a>
-    <a href="https://www.youtube.com/@vedantaschool6708" target="_blank"><img src="youtube.jpg" alt="YouTube"></a>
-    <a href="https://www.instagram.com/_vedanta_school?igsh=MTU0ajl3Z2thMGNzYQ==" target="_blank"><img src="instagram.jpeg" alt="Instagram"></a>
-
+    <a href="https://www.facebook.com/Vedanta100" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+      <img src="fb-img.png" alt="Facebook" width="24" height="24">
+    </a>
+    <a href="https://www.youtube.com/@vedantaschool6708" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+      <img src="youtube.jpg" alt="YouTube" width="24" height="24">
+    </a>
+    <a href="https://www.instagram.com/_vedanta_school?igsh=MTU0ajl3Z2thMGNzYQ==" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+      <img src="instagram.jpeg" alt="Instagram" width="24" height="24">
+    </a>
+    
     <p>&copy; 2025 Vedanta School, Medavakkam</p>
   </footer>
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('mobile-nav');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-
-    document.querySelectorAll('#mobile-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-      });
-    });
-    const sliderImage = document.getElementById('slider-image');
-    const images = [
-      'sliders/slide1.jpeg',
-      'sliders/slide2.jpeg',
-      'sliders/slide3.jpeg',
-      'sliders/slide4.jpeg',
-      'sliders/slide5.jpeg',
-      'sliders/slide6.jpeg',
-      'sliders/slide7.jpeg',
-      'sliders/slide8.jpeg',
-      'sliders/slide9.jpeg'
-    ];
-    let current = 0;
-
-    function showNextImage() {
-      const img = new Image();
-      img.src = images[current];
-      img.onload = () => {
-        sliderImage.src = img.src;
-        sliderImage.classList.remove('loaded'); // trigger fade
-        void sliderImage.offsetWidth; // force reflow
-        sliderImage.classList.add('loaded'); // fade in
-      };
-      current = (current + 1) % images.length;
-    }
-
-    setInterval(showNextImage, 3000);
-    showNextImage(); // Initial load
-  </script>
+  
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

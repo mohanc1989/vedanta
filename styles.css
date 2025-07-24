@@ -1,0 +1,299 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf6e3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background: #f8b400;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+#mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #f8b400;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#mobile-nav a {
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#mobile-nav a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+#mobile-nav.open {
+  display: flex;
+}
+
+/* Slider styles */
+.slider {
+  width: 100%;
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.slider img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  position: absolute;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  z-index: 1;
+}
+
+.slider img.loaded {
+  opacity: 1;
+}
+
+/* Banner styles */
+.banner {
+  background: linear-gradient(to right, #ffe259, #ffa751);
+  padding: 30px 20px;
+  text-align: center;
+  color: #000;
+}
+
+.admission-banner {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.admission-banner span {
+  color: red;
+}
+
+.grades, .contact, .bus, .whatsapp {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.bus img {
+  margin-top: 10px;
+  max-width: 365px;
+  height: auto;
+}
+
+.footer-note {
+  font-size: 1em;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Content styles */
+.content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.section {
+  scroll-margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+/* Footer styles */
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+footer a:hover img {
+  transform: scale(1.1);
+}
+
+/* Info container styles */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.info-table {
+  flex: 1 1 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+  background: #fff8dc;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+.info-table th, .info-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.info-table th {
+  background: #f8b400;
+  color: white;
+  font-weight: bold;
+}
+
+.info-table tr:nth-child(even) {
+  background-color: rgba(248, 180, 0, 0.1);
+}
+
+/* Contact links */
+.phone-link, .whatsapp-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover, .whatsapp-link:hover {
+  color: #f8b400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: block;
+  }
+  
+  .admission-banner {
+    font-size: 1.5em;
+  }
+  
+  .grades, .contact, .bus, .whatsapp {
+    font-size: 1em;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .info-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 15px;
+  }
+  
+  header img {
+    height: 50px;
+  }
+  
+  .slider {
+    height: 250px;
+  }
+  
+  .banner {
+    padding: 20px 15px;
+  }
+} 
