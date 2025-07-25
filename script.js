@@ -1,5 +1,46 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+  // Theme switcher functionality
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeDropdown = document.getElementById('theme-dropdown');
+  const themeOptions = document.querySelectorAll('.theme-option');
+  
+  // Load saved theme from localStorage
+  const savedTheme = localStorage.getItem('theme') || 'teal';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateActiveTheme(savedTheme);
+  
+  // Theme toggle click
+  themeToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    themeDropdown.classList.toggle('show');
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    themeDropdown.classList.remove('show');
+  });
+  
+  // Theme option clicks
+  themeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      const theme = option.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateActiveTheme(theme);
+      themeDropdown.classList.remove('show');
+    });
+  });
+  
+  function updateActiveTheme(theme) {
+    themeOptions.forEach(option => {
+      option.classList.remove('active');
+      if (option.getAttribute('data-theme') === theme) {
+        option.classList.add('active');
+      }
+    });
+  }
+  
   // Mobile navigation toggle
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('mobile-nav');

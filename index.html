@@ -61,7 +61,25 @@
 <body>
   <header>
     <img src="logo.jpeg" alt="Vedanta School Logo" width="200" height="60">
-    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <div class="header-controls">
+      <div class="theme-switcher">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🎨</span>
+          <span class="theme-text">Theme</span>
+        </button>
+        <div class="theme-dropdown" id="theme-dropdown">
+          <button class="theme-option" data-theme="teal">
+            <span class="theme-color teal-color"></span>
+            Teal
+          </button>
+          <button class="theme-option" data-theme="yellow">
+            <span class="theme-color yellow-color"></span>
+            Yellow
+          </button>
+        </div>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
     <nav role="navigation" aria-label="Main navigation">
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
