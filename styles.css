@@ -475,31 +475,75 @@ nav a:hover::after {
 }
 
 .admission-banner {
-  font-size: 2.5em;
-  font-weight: 700;
+  font-size: 3.2em;
+  font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px var(--shadow-color);
-  animation: pulse 2s infinite;
+  margin-bottom: 25px;
+  text-shadow: 3px 3px 6px var(--shadow-color), 0 0 20px rgba(248, 180, 0, 0.3);
+  animation: admissionGlow 3s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, rgba(248, 180, 0, 0.1) 0%, rgba(255, 167, 38, 0.1) 100%);
+  border-radius: 20px;
+  border: 2px solid rgba(248, 180, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.admission-banner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(248, 180, 0, 0.6), 0 0 80px rgba(248, 180, 0, 0.3);
+  border-color: rgba(248, 180, 0, 0.6);
+  background: linear-gradient(135deg, rgba(248, 180, 0, 0.2) 0%, rgba(255, 167, 38, 0.2) 100%);
 }
 
 .admission-text {
   display: block;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: var(--text-color);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 .open-text {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #e74c3c;
-  font-weight: 800;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3);
+  animation: openTextPulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
+}
+
+@keyframes admissionGlow {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(248, 180, 0, 0.3), 0 0 40px rgba(248, 180, 0, 0.1);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(248, 180, 0, 0.5), 0 0 60px rgba(248, 180, 0, 0.2);
+  }
+}
+
+@keyframes openTextPulse {
+  0%, 100% { 
+    transform: scale(1);
+    color: #e74c3c;
+  }
+  50% { 
+    transform: scale(1.1);
+    color: #c0392b;
+  }
 }
 
 .grades {
