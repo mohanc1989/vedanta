@@ -40,9 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = target.offsetTop - headerHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
         });
       }
     });
@@ -99,8 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }, observerOptions);
 
   sections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
+    // Set initial state but ensure content is visible
+    section.style.opacity = '1';
+    section.style.transform = 'translateY(0)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     sectionObserver.observe(section);
   });
@@ -108,14 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add loading animation to tables
   const tables = document.querySelectorAll('.info-table');
   tables.forEach((table, index) => {
-    table.style.opacity = '0';
-    table.style.transform = 'translateY(20px)';
+    // Ensure tables are visible immediately
+    table.style.opacity = '1';
+    table.style.transform = 'translateY(0)';
     table.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    
-    setTimeout(() => {
-      table.style.opacity = '1';
-      table.style.transform = 'translateY(0)';
-    }, 300 + (index * 200));
   });
 
   // Enhanced image slider with controls and indicators
@@ -302,13 +302,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
   }
 
-  // Add parallax effect to banner
-  const banner = document.querySelector('.banner');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    banner.style.transform = `translateY(${rate}px)`;
-  });
+  // Parallax effect removed to fix spacing issue
+  // const banner = document.querySelector('.banner');
+  // window.addEventListener('scroll', () => {
+  //   const scrolled = window.pageYOffset;
+  //   const rate = scrolled * -0.5;
+  //   banner.style.transform = `translateY(${rate}px)`;
+  // });
 
   // Add typing effect to admission banner
   const admissionText = document.querySelector('.admission-text');
